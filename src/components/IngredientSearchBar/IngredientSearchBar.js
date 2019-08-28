@@ -1,33 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import useDebounce from '../../hooks/useDebounce';
 import { searchIngredients } from '../../redux/ingredients/actions';
-
-const INPUT_DEBOUNCE = 500; // 250ms, input delay
+import {
+  IngredientSearchBarContainer,
+  SearchBar,
+  ClearButton
+} from './IngredientSearchBar.styles';
 
 const IngredientSearchBar = ({ searchIngredients }) => {
   const [input, setInput] = useState('');
-  const debouncedInput = useDebounce(input, INPUT_DEBOUNCE);
 
   const handleInputChange = event => {
     const { value } = event.target;
     setInput(value);
+    searchIngredients(value);
   };
 
-  useEffect(() => {
-    searchIngredients(debouncedInput);
-  }, [debouncedInput, searchIngredients]);
+  const clearInput = () => {
+    setInput('');
+    searchIngredients('');
+  };
 
   return (
-    <form>
-      <input
+    <IngredientSearchBarContainer>
+      <SearchBar
         type="text"
         placeholder="Search ingredients..."
         value={input}
         onChange={handleInputChange}
       />
-    </form>
+      {input && <ClearButton onClick={clearInput}>&#10005;</ClearButton>}
+    </IngredientSearchBarContainer>
   );
 };
 

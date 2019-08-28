@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import RecipeSuggestionsPage from './pages/RecipeSuggestionsPage';
@@ -12,8 +13,8 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/suggestions" component={RecipeSuggestionsPage} />
-        <Route path="/recipe" component={RecipePage} />
+        <Route exact path="/recipes" component={RecipeSuggestionsPage} />
+        <Route path="/recipes/:recipeId" component={RecipePage} />
       </Switch>
     </div>
   );

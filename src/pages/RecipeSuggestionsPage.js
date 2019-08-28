@@ -1,5 +1,12 @@
 import React from 'react';
 
-const RecipeSuggestionsPage = () => <div>Recipe Suggestions</div>;
+import RecipesList from '../components/RecipesList';
+
+const RecipeSuggestionsPage = () => (
+  <div>
+    <h1>Recipes</h1>
+    <RecipesList />
+  </div>
+);
 
 export default RecipeSuggestionsPage;

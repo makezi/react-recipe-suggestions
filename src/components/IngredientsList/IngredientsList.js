@@ -3,21 +3,27 @@ import { connect } from 'react-redux';
 
 import IngredientsListItem from '../IngredientsListItem';
 import {
-  selectIngredientItems,
-  selectSearchedIngredients
+  selectUnselectedIngredients,
+  selectSearchedIngredients,
+  selectSearchedIngredientsCount
 } from '../../redux/ingredients/selectors';
 
-const IngredientsList = ({ ingredients, searchedIngredients }) => {
-  const ingredientsList = searchedIngredients.length
-    ? searchedIngredients
-    : ingredients;
+const IngredientsList = ({
+  ingredients,
+  searchedIngredients,
+  searchedIngredientsCount
+}) => {
+  const ingredientsList =
+    searchedIngredientsCount > 0 ? searchedIngredients : ingredients;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <h2>Ingredients</h2>
       {ingredientsList.map(ingredient => (
         <IngredientsListItem
           key={ingredient.ingredientId}
           ingredient={ingredient}
+          checked={false}
         />
       ))}
     </div>
@@ -25,8 +31,9 @@ const IngredientsList = ({ ingredients, searchedIngredients }) => {
 };
 
 const mapStateToProps = state => ({
-  ingredients: selectIngredientItems(state),
-  searchedIngredients: selectSearchedIngredients(state)
+  ingredients: selectUnselectedIngredients(state),
+  searchedIngredients: selectSearchedIngredients(state),
+  searchedIngredientsCount: selectSearchedIngredientsCount(state)
 });
 
 export default connect(mapStateToProps)(IngredientsList);

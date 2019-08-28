@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import {
@@ -8,16 +8,14 @@ import {
 
 const IngredientsListItem = ({
   ingredient,
+  checked,
   addIngredient,
   removeIngredient
 }) => {
-  const [checked, setChecked] = useState(false);
-
   const handleCheckboxChange = () => {
     const { ingredientId } = ingredient;
 
     checked ? removeIngredient(ingredientId) : addIngredient(ingredientId);
-    setChecked(!checked);
   };
 
   return (

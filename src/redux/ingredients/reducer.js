@@ -26,7 +26,7 @@ const ingredientsReducer = (state = INITIAL_STATE, action) => {
     case types.SEARCH_INGREDIENTS:
       return {
         ...state,
-        searched: searchIngredientsFromInput(state.items, action.payload) || []
+        searched: searchIngredientsFromInput(state.items, action.payload)
       };
     default:
       return state;

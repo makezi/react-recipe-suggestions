@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const IngredientsListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 `;
 
 export const Ingredients = styled.div`

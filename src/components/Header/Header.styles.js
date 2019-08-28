@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
 
   height: 40px;
-  padding: 10px;
+  padding: 15px;
 
   h1 {
     font-size: 24px;

@@ -9,6 +9,8 @@ import {
 } from './SelectedIngredientsList.styles';
 
 const SelectedIngredientsList = ({ ingredients }) => {
+  if (!ingredients.length) return null;
+
   return (
     <SelectedIngredientsListContainer>
       <h2>Selected</h2>

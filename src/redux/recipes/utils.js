@@ -1,21 +1,22 @@
 export const searchRecipesWithSelectedIngredients = (recipes, ingredients) => {
   if (!ingredients.length) return recipes;
 
-  const recipesWithSelectedIngredients = Object.values(recipes)
+  const recipesWithSelectedIngredient = Object.values(recipes)
     .filter(recipe => {
-      const recipeIngredients = recipe.ingredients;
-      let recipeHasIngredients = false;
+      // Obtain only the ingredients' ids from the recipe
+      const recipeIngredientIds = recipe.ingredients.reduce(
+        (ingredientIds, ingredient) => {
+          return [...ingredientIds, ingredient.ingredientId];
+        },
+        []
+      );
 
-      ingredients.forEach(ingredient => {
-        recipeHasIngredients = recipeIngredients.find(
-          recipeIngredient =>
-            recipeIngredient.ingredientId === ingredient.ingredientId
-        );
-      });
-
-      return recipeHasIngredients;
+      // True if any ingredient exists in the recipes' ingredients
+      return ingredients.some(ingredient =>
+        recipeIngredientIds.includes(ingredient.ingredientId)
+      );
     })
     .map(recipe => recipe.recipeId);
 
-  return recipesWithSelectedIngredients;
+  return recipesWithSelectedIngredient;
 };

@@ -1,0 +1,112 @@
+{
+  "ingredients": {
+    "1": {
+      "ingredientId": 1,
+      "name": "Sweet Potato"
+    },
+    "2": {
+      "ingredientId": 2,
+      "name": "Garlic Cloves"
+    },
+    "3": {
+      "ingredientId": 3,
+      "name": "Oil"
+    },
+    "4": {
+      "ingredientId": 4,
+      "name": "Wholemeal Plain Flour"
+    },
+    "5": {
+      "ingredientId": 5,
+      "name": "White Plain Flour"
+    },
+    "6": {
+      "ingredientId": 6,
+      "name": "Salt"
+    },
+    "7": {
+      "ingredientId": 7,
+      "name": "Macaroni"
+    },
+    "8": {
+      "ingredientId": 8,
+      "name": "White Rice"
+    },
+    "9": {
+      "ingredientId": 9,
+      "name": "Rice Bran Oil"
+    },
+    "10": {
+      "ingredientId": 10,
+      "name": "Green Lentils"
+    },
+    "11": {
+      "ingredientId": 11,
+      "name": "Chickpeas"
+    },
+    "12": {
+      "ingredientId": 12,
+      "name": "Tomatoes"
+    },
+    "13": {
+      "ingredientId": 13,
+      "name": "Brown Onion"
+    },
+    "14": {
+      "ingredientId": 14,
+      "name": "Black Peppercorns"
+    },
+    "15": {
+      "ingredientId": 15,
+      "name": "Cinnamon"
+    },
+    "16": {
+      "ingredientId": 16,
+      "name": "Cumin"
+    },
+    "17": {
+      "ingredientId": 17,
+      "name": "Ground Coriander"
+    },
+    "18": {
+      "ingredientId": 18,
+      "name": "Sweet Paprika"
+    },
+    "19": {
+      "ingredientId": 19,
+      "name": "Lime Juice"
+    },
+    "20": {
+      "ingredientId": 20,
+      "name": "Broccoli"
+    },
+    "21": {
+      "ingredientId": 21,
+      "name": "Vegetable Stock"
+    },
+    "22": {
+      "ingredientId": 22,
+      "name": "Corn-Starch"
+    },
+    "23": {
+      "ingredientId": 23,
+      "name": "Cream"
+    },
+    "24": {
+      "ingredientId": 24,
+      "name": "Thyme"
+    },
+    "25": {
+      "ingredientId": 25,
+      "name": "Puff Pastry"
+    },
+    "26": {
+      "ingredientId": 26,
+      "name": "Butter"
+    },
+    "27": {
+      "ingredientId": 27,
+      "name": "Egg"
+    }
+  }
+}

@@ -5,18 +5,18 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import RecipeSuggestionsPage from './pages/RecipeSuggestionsPage';
 import RecipePage from './pages/RecipePage';
-import './App.css';
+import { AppContainer } from './App.styles';
 
 function App() {
   return (
-    <div>
+    <AppContainer>
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/recipes" component={RecipeSuggestionsPage} />
         <Route path="/recipes/:recipeId" component={RecipePage} />
       </Switch>
-    </div>
+    </AppContainer>
   );
 }
 

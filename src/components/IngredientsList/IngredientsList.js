@@ -7,6 +7,7 @@ import {
   selectSearchedIngredients,
   selectSearchedIngredientsCount
 } from '../../redux/ingredients/selectors';
+import { Ingredients, IngredientsListContainer } from './IngredientsList.styles';
 
 const IngredientsList = ({
   ingredients,
@@ -17,16 +18,18 @@ const IngredientsList = ({
     searchedIngredientsCount > 0 ? searchedIngredients : ingredients;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <IngredientsListContainer>
       <h2>Ingredients</h2>
-      {ingredientsList.map(ingredient => (
-        <IngredientsListItem
-          key={ingredient.ingredientId}
-          ingredient={ingredient}
-          checked={false}
-        />
-      ))}
-    </div>
+      <Ingredients>
+        {ingredientsList.map(ingredient => (
+          <IngredientsListItem
+            key={ingredient.ingredientId}
+            ingredient={ingredient}
+            checked={false}
+          />
+        ))}
+      </Ingredients>
+    </IngredientsListContainer>
   );
 };
 

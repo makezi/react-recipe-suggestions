@@ -3,12 +3,16 @@ import { connect } from 'react-redux';
 
 import IngredientsListItem from '../IngredientsListItem';
 import { selectSelectedIngredients } from '../../redux/ingredients/selectors';
+import {
+  SelectedIngredientsListContainer,
+  Ingredients
+} from './SelectedIngredientsList.styles';
 
 const SelectedIngredientsList = ({ ingredients }) => {
   return (
-    <div>
+    <SelectedIngredientsListContainer>
       <h2>Selected</h2>
-      <div>
+      <Ingredients>
         {ingredients.map(ingredient => (
           <IngredientsListItem
             key={ingredient.ingredientId}
@@ -16,8 +20,8 @@ const SelectedIngredientsList = ({ ingredients }) => {
             checked
           />
         ))}
-      </div>
-    </div>
+      </Ingredients>
+    </SelectedIngredientsListContainer>
   );
 };
 

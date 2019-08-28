@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { FaCheckCircle, FaRegCircle } from 'react-icons/fa';
 
 import {
   addIngredient,
   removeIngredient
 } from '../../redux/ingredients/actions';
+import { IngredientsListItemContainer } from './IngredientsListItem.styles';
 
 const IngredientsListItem = ({
   ingredient,
@@ -12,23 +14,16 @@ const IngredientsListItem = ({
   addIngredient,
   removeIngredient
 }) => {
-  const handleCheckboxChange = () => {
+  const handleOnClick = () => {
     const { ingredientId } = ingredient;
-
     checked ? removeIngredient(ingredientId) : addIngredient(ingredientId);
   };
 
   return (
-    <div>
-      <label>
-        <input
-          type="checkbox"
-          checked={checked}
-          onChange={handleCheckboxChange}
-        />
-        {ingredient.name}
-      </label>
-    </div>
+    <IngredientsListItemContainer onClick={handleOnClick}>
+      <span>{ingredient.name}</span>
+      {checked ? <FaCheckCircle /> : <FaRegCircle />}
+    </IngredientsListItemContainer>
   );
 };
 

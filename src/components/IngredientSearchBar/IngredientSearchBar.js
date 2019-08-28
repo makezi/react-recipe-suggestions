@@ -27,7 +27,7 @@ const IngredientSearchBar = ({ searchIngredients }) => {
     <IngredientSearchBarContainer>
       <SearchBar
         type="text"
-        placeholder="Search ingredients..."
+        placeholder="Search..."
         value={input}
         onChange={handleInputChange}
       />

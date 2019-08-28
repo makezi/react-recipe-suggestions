@@ -7,9 +7,11 @@ export const IngredientSearchBarContainer = styled.div`
   height: 40px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+  max-width: 420px;
   
-  @media screen and (min-width: 420px) {
-    max-width: 420px;
+  @media screen and (min-width: 600px) {
+    width: 100%;
+    max-width: 40%;
   }
 `;
 

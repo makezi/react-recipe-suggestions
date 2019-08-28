@@ -4,12 +4,14 @@ import IngredientSearchBar from '../../components/IngredientSearchBar';
 import SelectedIngredientsList from '../../components/SelectedIngredientsList';
 import IngredientsList from '../../components/IngredientsList';
 import SearchRecipesButton from '../../components/SearchRecipesButton';
-import { Container } from './HomePage.styles';
+import { Container, HeaderContainer } from './HomePage.styles';
 
 const HomePage = () => (
   <Container>
-    <h1>Select your ingredients</h1>
-    <IngredientSearchBar />
+    <HeaderContainer>
+      <h1>Which ingredients do you have?</h1>
+      <IngredientSearchBar />
+    </HeaderContainer>
     <SelectedIngredientsList />
     <IngredientsList />
     <SearchRecipesButton />

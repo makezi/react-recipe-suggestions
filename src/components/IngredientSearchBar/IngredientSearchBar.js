@@ -16,10 +16,8 @@ const IngredientSearchBar = ({ searchIngredients }) => {
   };
 
   useEffect(() => {
-    if (debouncedInput) {
-      searchIngredients(debouncedInput);
-    }
-  }, [debouncedInput]);
+    searchIngredients(debouncedInput);
+  }, [debouncedInput, searchIngredients]);
 
   return (
     <form>

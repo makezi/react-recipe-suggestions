@@ -12,7 +12,10 @@ const INITIAL_STATE = {
 const ingredientsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case types.ADD_INGREDIENT:
-      return { ...state, selected: [...state.selected, action.payload] };
+      return {
+        ...state,
+        selected: [...new Set([...state.selected, action.payload])]
+      };
     case types.REMOVE_INGREDIENT:
       return {
         ...state,
@@ -23,7 +26,7 @@ const ingredientsReducer = (state = INITIAL_STATE, action) => {
     case types.SEARCH_INGREDIENTS:
       return {
         ...state,
-        searched: searchIngredientsFromInput(state.items, action.payload)
+        searched: searchIngredientsFromInput(state.items, action.payload) || []
       };
     default:
       return state;

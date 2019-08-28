@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
+  position: fixed;
+  bottom: 20px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: hsl(360, 0%, 87%);
   border-radius: 6px;
   border: none;
   font-size: 16px;
@@ -11,7 +13,9 @@ export const Button = styled.button`
 
   align-self: center;
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 780px) {
+    position: relative;
+    bottom: 0;
     align-self: flex-end;
   }
 `;

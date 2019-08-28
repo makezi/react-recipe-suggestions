@@ -12,3 +12,14 @@ export const selectRecipeById = recipeId =>
     [selectRecipes],
     recipes => recipes.items[recipeId]
   );
+
+export const selectRecipeSuggestions = createSelector(
+  [selectRecipes],
+  recipes => {
+    const { items, suggestions } = recipes;
+
+    if (!suggestions.length) return [];
+
+    return suggestions.map(recipeId => items[recipeId]);
+  }
+);

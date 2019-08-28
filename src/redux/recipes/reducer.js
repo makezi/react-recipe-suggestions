@@ -1,5 +1,5 @@
 import * as types from './types';
-import { searchRecipesWithIngredients } from './utils';
+import { searchRecipesWithSelectedIngredients } from './utils';
 import RECIPES_DATA from './recipes.json';
 
 const INITIAL_STATE = {
@@ -12,7 +12,10 @@ const recipesReducer = (state = INITIAL_STATE, action) => {
     case types.SEARCH_RECIPES:
       return {
         ...state,
-        suggestions: searchRecipesWithIngredients(state.items, action.payload)
+        suggestions: searchRecipesWithSelectedIngredients(
+          state.items,
+          action.payload
+        )
       };
     default:
       return state;

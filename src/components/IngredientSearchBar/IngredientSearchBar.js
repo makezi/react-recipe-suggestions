@@ -15,6 +15,7 @@ const IngredientSearchBar = ({ searchIngredients }) => {
     const { value } = event.target;
     setInput(value);
     searchIngredients(value);
+
   };
 
   const clearInput = () => {

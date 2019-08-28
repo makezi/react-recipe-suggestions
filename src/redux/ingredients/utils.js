@@ -5,7 +5,7 @@ export const searchIngredientsFromInput = (ingredients, input) => {
     ingredient => {
       const [, ingredientData] = ingredient;
       const { name } = ingredientData;
-      return name.toLowerCase().includes(input);
+      return name.toLowerCase().includes(input.toLowerCase());
     }
   );
 

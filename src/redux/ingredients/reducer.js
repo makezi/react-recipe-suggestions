@@ -28,6 +28,11 @@ const ingredientsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         searched: searchIngredientsFromInput(state.items, action.payload)
       };
+    case types.CLEAR_SELECTED_INGREDIENTS:
+      return {
+        ...state,
+        selected: INITIAL_STATE.selected
+      };
     default:
       return state;
   }

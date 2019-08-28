@@ -3,17 +3,23 @@ import { connect } from 'react-redux';
 
 import IngredientsListItem from '../IngredientsListItem';
 import { selectSelectedIngredients } from '../../redux/ingredients/selectors';
+import { clearSelectedIngredients } from '../../redux/ingredients/actions';
 import {
   SelectedIngredientsListContainer,
+  HeaderContainer,
+  ClearButton,
   Ingredients
 } from './SelectedIngredientsList.styles';
 
-const SelectedIngredientsList = ({ ingredients }) => {
+const SelectedIngredientsList = ({ ingredients, clearIngredients }) => {
   if (!ingredients.length) return null;
 
   return (
     <SelectedIngredientsListContainer>
-      <h2>Selected</h2>
+      <HeaderContainer>
+        <h2>Selected</h2>
+        <ClearButton onClick={clearIngredients}>Clear All</ClearButton>
+      </HeaderContainer>
       <Ingredients>
         {ingredients.map(ingredient => (
           <IngredientsListItem
@@ -31,4 +37,11 @@ const mapStateToProps = state => ({
   ingredients: selectSelectedIngredients(state)
 });
 
-export default connect(mapStateToProps)(SelectedIngredientsList);
+const mapDispatchToProps = dispatch => ({
+  clearIngredients: () => dispatch(clearSelectedIngredients())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SelectedIngredientsList);

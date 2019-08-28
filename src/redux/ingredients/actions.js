@@ -14,3 +14,7 @@ export const searchIngredients = searchInput => ({
   type: types.SEARCH_INGREDIENTS,
   payload: searchInput
 });
+
+export const clearSelectedIngredients = () => ({
+  type: types.CLEAR_SELECTED_INGREDIENTS
+});

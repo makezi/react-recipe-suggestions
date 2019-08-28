@@ -1,5 +1,12 @@
 import React from 'react';
 
-const HomePage = () => <div>HOMEPAGE</div>;
+import IngredientSearchBar from '../components/IngredientSearchBar';
+
+const HomePage = () => (
+  <div>
+    <h1>Which ingredients do you have?</h1>
+    <IngredientSearchBar />
+  </div>
+);
 
 export default HomePage;

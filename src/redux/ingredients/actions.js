@@ -9,3 +9,8 @@ export const removeIngredient = ingredientId => ({
   type: types.REMOVE_INGREDIENT,
   payload: ingredientId
 });
+
+export const searchIngredients = searchInput => ({
+  type: types.SEARCH_INGREDIENTS,
+  payload: searchInput
+});

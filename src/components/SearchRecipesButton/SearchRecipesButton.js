@@ -5,7 +5,7 @@ import { compose } from 'redux';
 
 import { selectSelectedIngredients } from '../../redux/ingredients/selectors';
 import { searchRecipes } from '../../redux/recipes/actions';
-import { Button } from './SearchRecipesButton.styles'
+import { Button } from './SearchRecipesButton.styles';
 
 const SearchRecipesButton = ({
   history,
@@ -17,7 +17,11 @@ const SearchRecipesButton = ({
     searchRecipes(selectedIngredients);
   };
 
-  return <Button onClick={handleOnClick}>Search Recipes</Button>;
+  return (
+    <Button disabled={!selectedIngredients.length} onClick={handleOnClick}>
+      Search Recipes
+    </Button>
+  );
 };
 
 const mapStateToProps = state => ({

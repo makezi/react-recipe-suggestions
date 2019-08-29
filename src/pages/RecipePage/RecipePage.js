@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import PageContainer from '../../components/PageContainer';
+import RecipeStats from '../../components/RecipeStats';
 import { selectRecipeById } from '../../redux/recipes/selectors';
 
 const RecipePage = ({ recipe }) => {
@@ -18,11 +19,10 @@ const RecipePage = ({ recipe }) => {
   return (
     <PageContainer>
       <h1>{name}</h1>
+      <RecipeStats recipe={recipe} />
+
       <img width={200} height={200} src={image} alt={`${name}`} />
-      <p>{difficulty}</p>
-      <p>{prepTime}</p>
-      <p>{cookTime}</p>
-      <p>{makes}</p>
+
       <ul>
         {ingredients.map(ingredient => (
           <li>{ingredient.text}</li>

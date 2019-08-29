@@ -13,6 +13,7 @@ export const Ingredients = styled.div`
 
   @media screen and (min-width: 500px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
   }
 
   @media screen and (min-width: 780px) {

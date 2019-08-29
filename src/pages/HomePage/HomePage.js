@@ -1,13 +1,14 @@
 import React from 'react';
 
+import PageContainer from '../../components/PageContainer'
 import IngredientSearchBar from '../../components/IngredientSearchBar';
 import SelectedIngredientsList from '../../components/SelectedIngredientsList';
 import IngredientsList from '../../components/IngredientsList';
 import SearchRecipesButton from '../../components/SearchRecipesButton';
-import { Container, HeaderContainer } from './HomePage.styles';
+import { HeaderContainer } from './HomePage.styles';
 
 const HomePage = () => (
-  <Container>
+  <PageContainer>
     <HeaderContainer>
       <h1>Which ingredients do you have?</h1>
       <IngredientSearchBar />
@@ -15,7 +16,7 @@ const HomePage = () => (
     <SelectedIngredientsList />
     <IngredientsList />
     <SearchRecipesButton />
-  </Container>
+  </PageContainer>
 );
 
 export default HomePage;

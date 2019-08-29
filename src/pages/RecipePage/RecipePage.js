@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import PageContainer from '../../components/PageContainer';
 import { selectRecipeById } from '../../redux/recipes/selectors';
 
 const RecipePage = ({ recipe }) => {
@@ -15,7 +16,7 @@ const RecipePage = ({ recipe }) => {
     instructions
   } = recipe;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <PageContainer>
       <h1>{name}</h1>
       <img width={200} height={200} src={image} alt={`${name}`} />
       <p>{difficulty}</p>
@@ -32,7 +33,7 @@ const RecipePage = ({ recipe }) => {
           <li>{instruction}</li>
         ))}
       </ol>
-    </div>
+    </PageContainer>
   );
 };
 

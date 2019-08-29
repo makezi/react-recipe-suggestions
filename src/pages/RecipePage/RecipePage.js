@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { selectRecipeById } from '../redux/recipes/selectors';
+import { selectRecipeById } from '../../redux/recipes/selectors';
 
 const RecipePage = ({ recipe }) => {
   const {

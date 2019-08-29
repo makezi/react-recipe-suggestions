@@ -14,7 +14,8 @@ export const HeaderContainer = styled.div`
 
 export const ClearButton = styled.button`
   height: 40px;
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: hsl(350, 50%, 50%);
+  color: white;
   border-radius: 6px;
   border: none;
   font-size: 16px;

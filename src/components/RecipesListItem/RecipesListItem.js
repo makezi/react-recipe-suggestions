@@ -1,43 +1,44 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 
-const RecipesListItem = ({ history, match, recipe }) => {
-  const {
-    recipeId,
-    name,
-    difficulty,
-    prepTime,
-    cookTime,
-    makes,
-    image
-  } = recipe;
+import { selectMissingIngredientsForRecipe } from '../../redux/recipes/selectors';
+import {
+  RecipesListItemContainer,
+  BackgroundImage,
+  RecipesContentContainer,
+  RecipeName,
+  MissingIngredientsTag
+} from './RecipesListItem.styles';
+
+const RecipesListItem = ({ history, match, recipe, missingIngredients }) => {
+  const { recipeId, name, image } = recipe;
 
   const handleOnClick = () => {
     history.push(`${match.url}/${recipeId}`);
   };
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flex: 1,
-        flexDirection: 'column',
-        border: '1px solid black',
-        width: 200,
-        height: 200,
-        backgroundImage: `url(${image})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-      onClick={handleOnClick}
-    >
-      <span>{name}</span>
-      <span>{difficulty}</span>
-      <span>{prepTime}</span>
-      <span>{cookTime}</span>
-      <span>{makes}</span>
-    </div>
+    <RecipesListItemContainer onClick={handleOnClick}>
+      <BackgroundImage style={{ backgroundImage: `url(${image})` }} />
+      <RecipesContentContainer>
+        <RecipeName>{name}</RecipeName>
+        {missingIngredients.length ? (
+          <MissingIngredientsTag>Missing Ingredients</MissingIngredientsTag>
+        ) : null}
+      </RecipesContentContainer>
+    </RecipesListItemContainer>
   );
 };
 
-export default withRouter(RecipesListItem);
+const mapStateToProps = (state, ownProps) => ({
+  missingIngredients: selectMissingIngredientsForRecipe(
+    ownProps.recipe.recipeId
+  )(state)
+});
+
+export default compose(
+  connect(mapStateToProps),
+  withRouter
+)(RecipesListItem);

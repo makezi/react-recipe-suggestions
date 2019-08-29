@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 
 const selectRecipes = state => state.recipes;
+const selectIngredients = state => state.ingredients;
 
 export const selectAllRecipes = createSelector(
   [selectRecipes],
@@ -23,3 +24,25 @@ export const selectRecipeSuggestions = createSelector(
     return suggestions.map(recipeId => items[recipeId]);
   }
 );
+
+export const selectMissingIngredientsForRecipe = recipeId =>
+  createSelector(
+    [selectRecipes, selectIngredients],
+    (recipes, ingredients) => {
+      const selectedIngredients = ingredients.selected;
+
+      if (!selectedIngredients.length) return [];
+
+      const recipeById = recipes.items[recipeId];
+      const recipeIngredients = recipeById.ingredients;
+      const missingIngredients = recipeIngredients.filter(
+        recipeIngredient =>
+          !selectedIngredients.find(
+            selectedIngredient =>
+              selectedIngredient === recipeIngredient.ingredientId
+          )
+      );
+
+      return missingIngredients;
+    }
+  );

@@ -19,9 +19,16 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   color: black;
   margin: 5px;
+  display: flex;
+  align-items: center;
+  
 
   &:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  span {
+    margin-left: 5px;
   }
 `;

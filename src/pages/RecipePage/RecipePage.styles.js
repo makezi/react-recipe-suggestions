@@ -11,6 +11,7 @@ export const ImageAndIngrediantsContainer = styled.div`
 
 export const RecipeImage = styled.img`
   width: 100%;
+  border-radius: 6px;
 
   @media screen and (min-width: 500px) {
     width: 33%;

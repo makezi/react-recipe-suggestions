@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 import RecipesListItem from '../RecipesListItem';
 import { selectRecipeSuggestions } from '../../redux/recipes/selectors';

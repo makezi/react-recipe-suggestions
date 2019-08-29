@@ -12,5 +12,5 @@ export const RecipeIngredientsListContainer = styled.div`
 
 export const IngredientsListContainer = styled.ul`
   padding: 0 20px;
-  line-height: 1.5;
+  line-height: 2;
 `;

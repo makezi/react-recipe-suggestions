@@ -12,7 +12,7 @@ export const selectUnselectedIngredients = createSelector(
       ingredient => !selected.includes(ingredient.ingredientId)
     );
 
-    return unselectedIngredients;
+    return sortIngredients(unselectedIngredients);
   }
 );
 
@@ -29,7 +29,7 @@ export const selectSelectedIngredients = createSelector(
       ingredientId => items[ingredientId]
     );
 
-    return selectedIngredients;
+    return sortIngredients(selectedIngredients);
   }
 );
 
@@ -55,3 +55,7 @@ export const selectSearchedIngredientsCount = createSelector(
   [selectIngredients],
   ingredients => ingredients.searched.length
 );
+
+// Sort alphabetically
+const sortIngredients = ingredients =>
+  ingredients.sort((a, b) => a.name.localeCompare(b.name));

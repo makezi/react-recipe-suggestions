@@ -14,3 +14,7 @@ export const IngredientsListContainer = styled.ul`
   padding: 0 20px;
   line-height: 2;
 `;
+
+export const IngredientListItemContainer = styled.li`
+  color: ${({ isMissing }) => isMissing ? 'red' : 'black'};
+`

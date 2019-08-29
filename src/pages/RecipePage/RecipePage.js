@@ -4,11 +4,14 @@ import { connect } from 'react-redux';
 import PageContainer from '../../components/PageContainer';
 import RecipeStats from '../../components/RecipeStats';
 import RecipeIngredientsList from '../../components/RecipeIngredientsList';
-import RecipeInstructions from '../../components/RecipeInstructions'
-import { selectRecipeById } from '../../redux/recipes/selectors';
+import RecipeInstructions from '../../components/RecipeInstructions';
+import {
+  selectRecipeById,
+  selectMissingIngredientsForRecipe
+} from '../../redux/recipes/selectors';
 import { ImageAndIngrediantsContainer, RecipeImage } from './RecipePage.styles';
 
-const RecipePage = ({ recipe }) => {
+const RecipePage = ({ recipe, missingIngredients }) => {
   const { name, image, ingredients, instructions } = recipe;
   return (
     <PageContainer>
@@ -16,7 +19,10 @@ const RecipePage = ({ recipe }) => {
       <RecipeStats recipe={recipe} />
       <ImageAndIngrediantsContainer>
         <RecipeImage src={image} alt={`${name}`} />
-        <RecipeIngredientsList ingredients={ingredients} />
+        <RecipeIngredientsList
+          ingredients={ingredients}
+          missingIngredients={missingIngredients}
+        />
       </ImageAndIngrediantsContainer>
       <RecipeInstructions instructions={instructions} />
     </PageContainer>
@@ -24,7 +30,10 @@ const RecipePage = ({ recipe }) => {
 };
 
 const mapStateToProps = (state, ownProps) => ({
-  recipe: selectRecipeById(ownProps.match.params.recipeId)(state)
+  recipe: selectRecipeById(ownProps.match.params.recipeId)(state),
+  missingIngredients: selectMissingIngredientsForRecipe(
+    ownProps.match.params.recipeId
+  )(state)
 });
 
 export default connect(mapStateToProps)(RecipePage);

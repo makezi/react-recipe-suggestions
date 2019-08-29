@@ -106,5 +106,61 @@
   "27": {
     "ingredientId": 27,
     "name": "Egg"
+  },
+  "28": {
+    "ingredientId": 28,
+    "name": "Red Capsicum"
+  },
+  "29": {
+    "ingredientId": 29,
+    "name": "Corn Kernels"
+  },
+  "30": {
+    "ingredientId": 30,
+    "name": "Black Beans"
+  },
+  "31": {
+    "ingredientId": 31,
+    "name": "Brown Rice"
+  },
+  "32": {
+    "ingredientId": 32,
+    "name": "Leeks"
+  },
+  "33": {
+    "ingredientId": 33,
+    "name": "Potato"
+  },
+  "34": {
+    "ingredientId": 34,
+    "name": "Chicken Stock"
+  },
+  "35": {
+    "ingredientId": 35,
+    "name": "Chives"
+  },
+  "36": {
+    "ingredientId": 36,
+    "name": "Coconut Oil"
+  },
+  "37": {
+    "ingredientId": 37,
+    "name": "Tomato Paste"
+  },
+  "38": {
+    "ingredientId": 38,
+    "name": "Halloumi"
+  },
+  "39": {
+    "ingredientId": 39,
+    "name": "Halloumi"
+  },
+  "40": {
+    "ingredientId": 40,
+    "name": "Curry Powder"
+  },
+  "41": {
+    "ingredientId": 41,
+    "name": "Cocunet Milk"
   }
 }

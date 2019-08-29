@@ -187,5 +187,167 @@
       "Whisk egg and brush over top of pastry.",
       "Bake for 10 minutes or until pastry is golden and fluffy."
     ]
+  },
+  "4": {
+    "recipeId": 4,
+    "name": "Burrito Rice",
+    "difficulty": "Easy",
+    "prepTime": 10,
+    "cookTime": 20,
+    "makes": 4,
+    "image": "https://igav3-metcdn-com.global.ssl.fastly.net/content/uploads/sites/5/2019/07/24130404/Post-Feature-Image-900x100910.jpg",
+    "ingredients": [
+      {
+        "ingredientId": 13,
+        "text": "1 brown onion, diced"
+      },
+      {
+        "ingredientId": 28,
+        "text": "1 red capsicum, diced"
+      },
+      {
+        "ingredientId": 29,
+        "text": "½ cup fresh corn kernels"
+      },
+      {
+        "ingredientId": 30,
+        "text": "1 tin black beans, rinsed and drained"
+      },
+      {
+        "ingredientId": 31,
+        "text": "1 cup uncooked brown rice"
+      },
+      {
+        "ingredientId": 12,
+        "text": "1 tin crushed tomatoes"
+      },
+      {
+        "ingredientId": 18,
+        "text": "1 tsp smoked paprika"
+      },
+      {
+        "ingredientId": 16,
+        "text": "1 tsp ground cumin"
+      }
+    ],
+    "instructions": [
+      "Add all the burrito bowl ingredients (not toppings) to a pot and mix well. Put the lid on the pot and simmer on stove top for 20 minutes, stirring occasionally, until rice is cooked.",
+      "Serve warm and have the kids assemble their own burritos with additional fillings of their choice."
+    ]
+  },
+  "5": {
+    "recipeId": 5,
+    "name": "Potato and Leek Soup",
+    "difficulty": "Easy",
+    "prepTime": 25,
+    "cookTime": 45,
+    "makes": 4,
+    "image": "https://igav3-metcdn-com.global.ssl.fastly.net/content/uploads/sites/5/2019/07/17150037/Post-Feature-Image-900x10096.jpg",
+    "ingredients": [
+      {
+        "ingredientId": 26,
+        "text": "35g butter"
+      },
+      {
+        "ingredientId": 32,
+        "text": "12 leeks sliced"
+      },
+      {
+        "ingredientId": 13,
+        "text": "1 brown onion finely chopped"
+      },
+      {
+        "ingredientId": 2,
+        "text": "1 tbsp minced garlic"
+      },
+      {
+        "ingredientId": 33,
+        "text": "600g potatoes, peeled and chopped"
+      },
+      {
+        "ingredientId": 34,
+        "text": "3 cups chicken stock"
+      },
+      {
+        "ingredientId": 23,
+        "text": "½ cup thickened cream"
+      },
+      {
+        "ingredientId": 35,
+        "text": "2 tbsp chopped chives"
+      }
+    ],
+    "instructions": [
+      "Melt the butter and sauté leeks, onion and garlic until soft and translucent.",
+      "Add potatoes and cook for an extra 5 minutes.",
+      "Add stock and simmer uncovered until potatoes are tender. Remove from heat and puree",
+      "Return to heat and add cream.",
+      "Bring to the boil. Remove from heat and season with salt and pepper.",
+      "Top with fresh chives before serving."
+    ]
+  },
+  "6": {
+    "recipeId": 6,
+    "name": "Butter Chickpeas",
+    "difficulty": "Medium",
+    "prepTime": 10,
+    "cookTime": 25,
+    "makes": 4,
+    "image": "https://igav3-metcdn-com.global.ssl.fastly.net/content/uploads/sites/5/2019/07/10123914/Post-Feature-Image-900x10092.jpg",
+    "ingredients": [
+      {
+        "ingredientId": 36,
+        "text": "1 tbsp coconut oil"
+      },
+      {
+        "ingredientId": 13,
+        "text": "1 medium brown onion, diced"
+      },
+      {
+        "ingredientId": 2,
+        "text": "2 tbsp minced garlic"
+      },
+      {
+        "ingredientId": 21,
+        "text": "1/2 cup vegetable stock"
+      },
+      {
+        "ingredientId": 37,
+        "text": "1½ cups tomato paste"
+      },
+      {
+        "ingredientId": 39,
+        "text": "180g halloumi, cubed"
+      },
+      {
+        "ingredientId": 11,
+        "text": "2 cans chickpeas, rinsed and drained"
+      },
+      {
+        "ingredientId": 40,
+        "text": "1½ tsp mild curry powder"
+      },
+      {
+        "ingredientId": 16,
+        "text": "1 tsp ground cumin"
+      },
+      {
+        "ingredientId": 17,
+        "text": "1 tsp ground coriander"
+      },
+      {
+        "ingredientId": 41,
+        "text": "1 can coconut milk"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a heavy-bottomed pot over medium heat. Add onion and cook until translucent.",
+      "Add garlic and all of the spices to the onions and cook, stirring frequently, until very fragrant (about 1 minute).",
+      "Add the vegetable stock and stir, being sure to scrape all of the browned bits off the bottom.",
+      "Add the tomato passata, coconut milk and chickpeas and stir until well combined. Bring to a simmer and cook for 10 minutes.",
+      "Add the halloumi and cook for a further 15 minutes.",
+      "Remove from heat and season with salt to taste.",
+      "Serve rice and top with a spoonful of yoghurt and fresh coriander."
+    ]
   }
 }
